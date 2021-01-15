@@ -1,4 +1,7 @@
-﻿using CommandLine;
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+using CommandLine;
 using Microsoft.Azure.Devices.Client;
 using System;
 using System.Collections.Generic;
@@ -6,6 +9,9 @@ using System.Text;
 
 namespace X509DeviceCertWithChainSample
 {
+    /// <summary>
+    /// Parameters for the application.
+    /// </summary>
     internal class Parameters
     {
         [Option(
@@ -54,7 +60,7 @@ namespace X509DeviceCertWithChainSample
             'k',
             "devicePfxPath",
             Required = true,
-            HelpText = "Path to device pfx path.")]
+            HelpText = "Path to device pfx.")]
         public string DevicePfxPath { get; set; }
 
         [Option(
